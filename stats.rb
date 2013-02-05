@@ -12,7 +12,8 @@ count_by_state = {}
 count_by_label = {}
 checklist_totals = [0,0]
 
-board = Trello::Board.find(ENV['TRELLO_BOARD_ID'])
+board_id = ARGV[0] || ENV['TRELLO_BOARD_ID']
+board = Trello::Board.find(board_id)
 board.lists.each do |list|
   next if list.name == 'Ideas'
 

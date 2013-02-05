@@ -9,5 +9,5 @@ Uses the Trello API to produce simple statistics:
 ```
 $ cp .env.sample .env
 $ vi .env
-$ foreman run ruby stats.rb
+$ foreman run ruby stats.rb [board id] # defaults to $TRELLO_BOARD_ID
 ```
